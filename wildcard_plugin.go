@@ -67,13 +67,16 @@ func (cmd *Wildcard) Run(cliConnection plugin.CliConnection, args []string) {
 	} else if args[0] == "wildcard-delete" && len(args) >= 2 && len(args) <= 4 {
 		pattern := args[1]
 		fmt.Println(pattern)
+		wildcardFlagSet := flag.NewFlagSet("echo", flag.ExitOnError)
+		force := wildcardFlagSet.Bool("f", false, "forces deletion of all apps matching APP_NAME_WITH_WILDCARD")
+		routes := wildcardFlagSet.Bool("r", false, "delete routes asssociated with APP_NAME_WITH_WILDCARD")
 		if len(args) > 2 {
-			wildcardFlagSet := flag.NewFlagSet("echo", flag.ExitOnError)
-			force := wildcardFlagSet.Bool("f", false, "forces deletion of all apps matching APP_NAME_WITH_WILDCARD")
-			routes := wildcardFlagSet.Bool("r", false, "delete routes asssociated with APP_NAME_WITH_WILDCARD")
-			err := wildcardFlagSet.Parse(args[1:])
+			wildcardFlagSet1 := flag.NewFlagSet("echo", flag.ExitOnError)
+			force1 := wildcardFlagSet.Bool("f", false, "forces deletion of all apps matching APP_NAME_WITH_WILDCARD")
+			routes1 := wildcardFlagSet.Bool("r", false, "delete routes asssociated with APP_NAME_WITH_WILDCARD")
+			err := wildcardFlagSet1.Parse(args[1:])
 			fmt.Println(args)
-			fmt.Println(wildcardFlagSet)
+			fmt.Println(wildcardFlagSet1)
 
 			reversedArgs := reverseOrder(args)
 
@@ -86,9 +89,9 @@ func (cmd *Wildcard) Run(cliConnection plugin.CliConnection, args []string) {
 			fmt.Println(reversedArgs)
 			fmt.Println(wildcardFlagSet2)
 
-			pattern = wildcardFlagSet.Arg(0)
-			*force = *force || *force2
-			*routes = *routes || *routes2
+			pattern = wildcardFlagSet1.Arg(0)
+			*force = *force1 || *force2
+			*routes = *routes2 || *routes2
 
 			// Parse starting from [1] because the [0]th element is the
 			// name of the command and
