@@ -91,7 +91,7 @@ func (cmd *Wildcard) Run(cliConnection plugin.CliConnection, args []string) {
 
 			pattern = wildcardFlagSet1.Arg(0)
 			*force = *force1 || *force2
-			*routes = *routes2 || *routes2
+			*routes = *routes1 || *routes2
 
 			// Parse starting from [1] because the [0]th element is the
 			// name of the command and
