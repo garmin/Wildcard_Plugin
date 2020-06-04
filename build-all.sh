@@ -44,7 +44,7 @@ cat
 #Final build gives developer a plugin to install
 godep go build
 
-if [[ "$1" = "release" ]] ; then 
+if [[ "$1" = "release" ]] ; then
 	git commit -am "Build version $TAG"
 	git tag $TAG
 	echo "Tagged release, 'git push --tags' to move it to github, and copy the output above"

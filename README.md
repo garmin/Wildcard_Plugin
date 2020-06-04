@@ -4,33 +4,41 @@ This CF CLI Plugin allows users to search through and delete their applications 
 #Requirements
 To prevent your shell from expanding the wildcard before the plugin sees it, wildcards should be escaped using a preceding '\\'.
 ```
-$ cf wc-d app\*
-$ cf wc-a app\?
+cf wc-d app\*
+cf wc-a app\?
 ```
 # Installation
 
+#### Install from github
+##### OSX
+`cf install-plugin http://github.com/garmin/Wildcard_Plugin/raw/1.0.4/bin/osx/wildcard_plugin`
+##### WIN64
+`cf install-plugin http://github.com/garmin/Wildcard_Plugin/raw/1.0.4/bin/win64/wildcard_plugin.exe`
+##### LINUX
+`cf install-plugin https://github.com/garmin/Wildcard_Plugin/raw/1.0.4/bin/linux64/wildcard_plugin`
+
 #### Install from Source
 ```
-$ go get code.cloudfoundry.org/cli
-$ go get github.com/garmin/Wildcard_Plugin
-$ cd $GOPATH/src/github.com/garmin/Wildcard_Plugin
-$ go build *.go
-$ cf install-plugin wildcard_plugin
+go get code.cloudfoundry.org/cli
+go get github.com/garmin/Wildcard_Plugin
+cd $GOPATH/src/github.com/garmin/Wildcard_Plugin
+go build *.go
+cf install-plugin wildcard_plugin
 ```
 
 ## Usage
 
 ```
-$ cf wildcard-apps APP_NAME_WITH_WILDCARD
+cf wildcard-apps APP_NAME_WITH_WILDCARD
 ```
 ```
-$ cf wildcard-delete APP_NAME_WITH_WILDCARD [-f -r]
+cf wildcard-delete APP_NAME_WITH_WILDCARD [-f -r]
 ```
 
 ## Uninstall
 
 ```
-$ cf uninstall-plugin wildcard
+cf uninstall-plugin wildcard
 ```
 ## Commands for wildcard-apps, wc-a
 
