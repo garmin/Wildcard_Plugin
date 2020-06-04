@@ -11,9 +11,9 @@ cf wc-a app\?
 
 #### Install from github
 ##### OSX
-`cf install-plugin http://github.com/garmin/Wildcard_Plugin/raw/master/bin/osx/wildcard_plugin`
+`cf install-plugin https://github.com/garmin/Wildcard_Plugin/raw/master/bin/osx/wildcard_plugin`
 ##### WIN64
-`cf install-plugin http://github.com/garmin/Wildcard_Plugin/raw/master/bin/win64/wildcard_plugin.exe`
+`cf install-plugin https://github.com/garmin/Wildcard_Plugin/raw/master/bin/win64/wildcard_plugin.exe`
 ##### LINUX
 `cf install-plugin https://github.com/garmin/Wildcard_Plugin/raw/master/bin/linux64/wildcard_plugin`
 
