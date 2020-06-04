@@ -22,7 +22,7 @@ func (cmd *Wildcard) GetMetadata() plugin.PluginMetadata {
 		Version: plugin.VersionType{
 			Major: 1,
 			Minor: 0,
-			Build: 3-garmin,
+			Build: 4,
 		},
 		Commands: []plugin.Command{
 			{
