@@ -9,16 +9,17 @@
     homepage: https://github.com/jeaniejung
     contact: jeaniejung95@gmail.com
   - name: Bobby Hubbard
+    homepage: https://github.com/garmin
     contact: robert.hubbard@garmin.com
 
-  homepage: https://github.com/jeaniejung/Wildcard_Plugin
+  homepage: https://github.com/garmin/Wildcard_Plugin
   binaries:
   - platform: osx
-    url: http://github.com/jeaniejung/Wildcard_Plugin/raw/_TAG_/bin/osx/wildcard_plugin
+    url: http://github.com/garmin/Wildcard_Plugin/raw/_TAG_/bin/osx/wildcard_plugin
     checksum: osx-sha1
   - platform: win64
-    url: http://github.com/jeaniejung/Wildcard_Plugin/raw/_TAG_/bin/win64/wildcard_plugin.exe
+    url: http://github.com/garmin/Wildcard_Plugin/raw/_TAG_/bin/win64/wildcard_plugin.exe
     checksum: win64-sha1
   - platform: linux64
-    url: https://github.com/jeaniejung/Wildcard_Plugin/raw/_TAG_/bin/linux64/wildcard_plugin
+    url: https://github.com/garmin/Wildcard_Plugin/raw/_TAG_/bin/linux64/wildcard_plugin
     checksum: linux64-sha1
