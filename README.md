@@ -9,16 +9,6 @@ $ cf wc-a app\?
 ```
 # Installation
 
-#### Install from CLI (v.6.10.0 and up)
-```
-$ cf add-plugin-repo CF-Community http://plugins.cloudfoundry.org/
-$ cf install-plugin wildcard_plugin -r CF-Community
-```
-
-[//]: # (#### Install from binary)
-[//]: # (- Download the appropriate plugin binary from [releases](https://github.com/swisscom/cf-statistics-plugin/releases))
-[//]: # (- Install the plugin: `$ cf install-plugin <binary>`)
-
 #### Install from Source
 ```
 $ go get code.cloudfoundry.org/cli
