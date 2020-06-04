@@ -6,7 +6,7 @@ TASK_ROOT_DIR=$PWD
 SCRIPT_DIR=$(dirname $0)
 
 BINARY_NAME=${BINARY_NAME:-wildcard}
-VERSION=${VERSION:-0.0.9}
+VERSION=${VERSION:-1.0.1-garmin}
 
 go_version=`go version`
 echo "Building $BINARY_NAME with version: $VERSION for all platforms/archs with go version: $go_version"
@@ -29,10 +29,10 @@ go get -u github.com/tools/godep
 
 for platform in linux darwin windows; do
   for arch in 386 amd64; do
-	  
+
     executable_name=$BINARY_NAME
     mkdir -p bin/$platform/$arch
-  
+
     if [ "$platform"  == "windows" ]; then
 	  executable_name=${BINARY_NAME}.exe
 	fi
@@ -40,8 +40,8 @@ for platform in linux darwin windows; do
 	GOOS=$platform GOARCH=$arch godep go build -v -o bin/$platform/$arch/${executable_name} ./...
 	if [ "$?" == "0" ]; then
 	  echo "Built $executable_name against $platform/$arch"
-	fi 
-	  
+	fi
+
   done
 
 done

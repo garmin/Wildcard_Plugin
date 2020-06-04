@@ -3,7 +3,7 @@ repo-master-branch: "master"
 
 # Binary output
 binary-name: wildcard
-binary-version: 0.0.9
+binary-version: 1.0.1-garmin
 
 # AWS S3 info
 binary-bucket: "cf-wildcard-plugin"
